@@ -1,0 +1,14 @@
+<div class="app-layout">
+  <!-- Top Navigation Bar -->
+  <app-navbar (toggleSidebar)="toggleSidebar()"></app-navbar>
+
+  <div class="app-body">
+    <!-- Left Navigation Sidebar -->
+    <app-sidebar [collapsed]="isSidebarCollapsed()" (navigate)="toggleSidebar()"></app-sidebar>
+
+    <!-- Main Dynamic Content Workspace -->
+    <main class="app-main-content">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>
